@@ -3,8 +3,8 @@ import requests
 import json
 from tqdm import tqdm
 
-url = "https://creedvintage.myshopify.com/admin/api/2023-07/graphql.json"
-access_token = "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"
+url = "https://shop.myshopify.com/admin/api/2023-07/graphql.json"
+access_token = " , "  # Add Shopify Access Token
 
 # Define the GraphQL mutation
 mutation = """
@@ -66,12 +66,12 @@ filenames = [
 
 # Create the GraphQL request payload
 variables = {
-    "id": "gid://shopify/DeliveryProfile/106449404183",
+    "id": "gid://shopify/DeliveryProfile/123456789",   # Add DeliveryProfile ID
     "profile": {
-        "name": "CreedVintage",
+        "name": "Profile Name",                        # Add Profile Name
         "locationGroupsToCreate": [
             {
-                "locationsToAdd": ["gid://shopify/Location/78278033687"],
+                "locationsToAdd": ["gid://shopify/Location/123456789"],  # Add shopify Location ID
                 "zonesToCreate": []
             }
         ]
